@@ -2,6 +2,10 @@
   // 首页banner房子跟随浮动
   let inTime = 0
   $('#indexBanner').mousemove((e) => {
+    let pageTop = window.pageYOffset
+    if (pageTop > 100 ) {
+      return false
+    }
     let nowTime = new Date().getTime()
     if (nowTime - inTime > 100) {
       // let x = e.pageX
@@ -63,11 +67,27 @@
     setTimeout(function () {
       $('.banenr-main__floor img').removeClass('inShow')
     }, 1200)
+    // $('.solution-bg').css({'top' : $('.solution').offset().top - 150})
   })
 
   $(window).scroll(() => {
-    let toTop = $(this).scrollTop();
-    $('.banenr-main__floor').css({'transform' : 'translateY(-'+ toTop / 4 +'px)'})
-    $('.bannerBack').css({'transform' : 'translateY(-'+ toTop / 10 +'px)'})
+    let toTop = $(this).scrollTop()
+    // console.log(toTop)
+    let solutionTop = $('.solution').offset().top - toTop
+    if (solutionTop - 100 < window.innerHeight && toTop < $('.solution').offset().top + 500) {
+      $('.solution-bg').css({'display' : 'block'})
+      $('.solution-bg').css({'display' : 'block','transform' : 'translateY('+ (solutionTop - 500) / 1.5 +'px)'})
+    } else {
+      $('.solution-bg').css({'display' : 'none'})
+    }
+
+
+
+    if (toTop < 1000) {
+      $('.bannerBack').css({'display' : 'block'})
+      $('.banenr-main__floor').css({'transform' : 'translateY(-'+ toTop / 6 +'px)'})
+      $('.bannerBack').css({'transform' : 'translateY(-'+ toTop / 10 +'px)'})
+    }
+    
   })
 })()
