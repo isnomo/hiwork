@@ -61,7 +61,7 @@
     });
   });
 
-  $("#footer").load("menu.html", () => {
+  $("footer").load("footer.html", () => {
     // console.log("手机导航加载成功");
   });
 

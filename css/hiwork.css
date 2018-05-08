@@ -130,7 +130,93 @@ header{
 section{
   margin: 60px auto;
 }
-
+.footer{
+  padding: 40px 0;
+  background: #009944;
+  .footer-wall{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+  }
+  .footer-left{
+    .footer-left-nav{
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start; 
+      flex-wrap: wrap;
+      width: 400px;
+      margin-bottom: 20px;
+      .footer-left-nav__item{
+        margin-bottom: 20px;
+        &:first-child{
+          margin-right: 40px;
+        }
+        h5{
+          font-family: DIN-Bold;
+          font-weight: 600;
+          font-size: 1.4rem;
+          color: #000000;
+          letter-spacing: 0.23px;
+          line-height: 22px;
+          a{
+            font-family: DIN-Bold;
+            font-size: 1.4rem;
+            color: #000000;
+            letter-spacing: 0.23px;
+            line-height: 22px;
+          }
+        }
+        p{
+          font-size: 1.4rem;
+          color: #000000;
+          letter-spacing: 0.23px;
+          line-height: 25px;
+          a{
+            font-size: 1.4rem;
+            color: #000000;
+            letter-spacing: 0.23px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+    .footer-left-site{
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start; 
+      .footer-left-site__cn{
+        padding-right: 20px;
+        border-right: 1px solid #000;
+        p{
+          font-size: 1.4rem;
+          color: #000000;
+          letter-spacing: 0.23px;
+          line-height: 23px;
+        }
+      }
+      .footer-left-site__en{
+        padding-left: 20px;
+        p{
+          font-family: DIN-Regular;
+          font-size: 1.4rem;
+          color: #000000;
+          letter-spacing: 0.23px;
+          line-height: 23px;
+        }
+      }
+    }
+  }
+  .footer-right{
+    p{
+      font-family: DIN-Regular;
+      font-size: 1.3rem;
+      color: #000000;
+      letter-spacing: 0.95px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+}
 
 
 

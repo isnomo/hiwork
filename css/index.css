@@ -298,7 +298,6 @@
       width: 150px;
       height: 45px;
       border: 1px solid #C3C3C3;
-      padding-left: 12px;
       position: relative;
       span{
         width: 0;
@@ -322,6 +321,7 @@
         font-size: 1.4rem;
         color: #000000;
         letter-spacing: 0.23px;
+        padding-left: 12px;
         z-index: 2;
         position: relative;
       }
@@ -348,12 +348,125 @@
   }
   .project-map{
     margin-top: 30px;
-    background: url('../img/mapBg.png') center no-repeat;
+    .project-map-wall{
+      .project-map-item{
+        background-image: url('../img/mapBg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 60px 0 120px;
+        .project-map-item-wall{
+          padding: 40px;
+          background-color: #fff;
+          width: 800px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          background-image: url('../img/mapItemBg.png');
+          background-position: center right;
+          background-repeat: no-repeat;
+          background-size: 350px;
+
+          .project-map-item__text{
+            width: 35%;
+            h5{
+              display: inline-block;
+              font-weight: 600;
+              font-size: 2.4rem;
+              color: #000000;
+              letter-spacing: 0.4px;
+              padding-bottom: 5px;
+              border-bottom: 3px solid #009944;
+            }
+            p{
+              font-size: 16px;
+              color: #000000;
+              letter-spacing: 1.1px;
+              text-align: justify;
+              line-height: 28px;
+              margin: 10px 0 60px;
+            }
+            img{
+              width: 90%;
+            }
+          }
+          .project-map-item__img{
+            width: 60%;
+            img{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .project-map-control{
+      width: 800px;
+      position: relative;
+      top: -100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .project-map-control__button{
+        margin: 0 60px;
+        ul{
+          li{
+            cursor: pointer;
+            margin: 0 8px;
+            width: 10px;
+            height: 10px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 100%;
+            &.active{
+              background: rgba(255,255,255,1);
+            }
+          }
+        }
+      }
+      .project-map-control__left,.project-map-control__right{
+        cursor: pointer;
+        margin-top: 5px;
+      }
+    }
+  }
+
+}
+.partners{
+  margin-bottom: 0;
+  h3{
+    font-family: DIN-Bold;
+    font-size: 4rem;
+    color: #009944;
+    letter-spacing: 1.88px;
+    text-align: center;
+    line-height: 62px;
+  }
+  h4{
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: #009944;
+    letter-spacing: 1.76px;
+    text-align: center;
+    line-height: 24px;
+  }
+  .partners-icon{
+    padding: 60px 0 40px;
+    margin-top: 40px;
+    background-image: url('../img/partnersBg.png');
+    background-position: center;
     background-size: cover;
-    padding: 60px 0;
+    background-repeat: no-repeat;
+    .partners-icon-wall{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      img{
+        margin-bottom: 20px;
+        width: 24%;
+      }
+    }
   }
 }
-
 
 
 
