@@ -1,27 +1,30 @@
 
-    function bikelist(option) {
-        var $bikeBanner = option.wall;
-        var timejg = option.timer || 3000;
-        var moveSpeed = option.speed || 300;
-        var $boxTab = $bikeBanner.find('.box_tab');
-        var $boxImg = $bikeBanner.find('.box_img');
-        
-        var size = $boxImg.find('ul').find('li').size();
-        for (var i = 1; i <= size; i++) {
-            $boxTab.append('<a href=""><span></span></a>')
-        }
-        
-        if(size<2){
-            $bikeBanner.find('.box_right').hide();
-            $bikeBanner.find('.box_left').hide();
-        }
+    function carousel(option) {
+        let $bannerWall = option.wall;
+        let timejg = option.timer || 3000;
+        let moveSpeed = option.speed || 300;
+        let $boxTab = option.boxTab || null;
+        let $boxImg = option.boxImg || null;
+        let $boxArrow = option.boxArrow || null;
+        let defaultActive = option.defaultActive || 0;
 
-        $boxImg.find('ul').find('li').eq(0).show();
-        $boxTab.find('a').eq(0).addClass('active');
-        $boxTab.find('a').on('click', function () {
-            event.preventDefault();
+        // var size = $boxImg.find('ul').find('li').size();
+        // for (var i = 1; i <= size; i++) {
+        //     $boxTab.append('<a href=""><span></span></a>')
+        // }
+        
+        // if(size<2){
+        //     $bannerWall.find('.box_right').hide();
+        //     $bannerWall.find('.box_left').hide();
+        // }
+
+        // 初始化
+        $boxImg.find('ul').find('li').eq(defaultActive).addClass('active');
+        $boxTab.find('ul').find('li').eq(defaultActive).addClass('active');
+        // 圆点点击事件
+        $boxTab.find('ul').find('li').on('click', function () {
             $(this).addClass('active').siblings().removeClass('active');
-            var index = $(this).index();
+            let index = $(this).index();
             i = index;
             $boxImg.find('ul').find('li').eq(index).stop().fadeIn(moveSpeed).siblings().stop().fadeOut(moveSpeed);
         });
@@ -74,16 +77,16 @@
         //     }
         // }, false);
 
-        $bikeBanner.on('touchstart', function (e){
+        $bannerWall.on('touchstart', function (e){
             var touch = e.originalEvent.targetTouches[0];
             touch_px = touch.pageX;
             clearInterval(time);
         });
-        $bikeBanner.on('touchmove', function (e){
+        $bannerWall.on('touchmove', function (e){
             var touch = e.originalEvent.targetTouches[0];
             rate = touch_px - touch.pageX;
         });
-        $bikeBanner.on('touchend', function (e){
+        $bannerWall.on('touchend', function (e){
             if (rate > 50) {
                 $(this).stop(true);
                 moveUp();
@@ -97,17 +100,17 @@
 
 
 
-        $bikeBanner.hover(function () {
+        $bannerWall.hover(function () {
             clearInterval(time);
         }, function () {
             time = setInterval(moveUp, timejg);
         });
-        $bikeBanner.find('.box_left').click(function(){
+        $bannerWall.find('.box_left').click(function(){
             clearInterval(time);
             moveDown();
 
         });
-        $bikeBanner.find('.box_right').click(function(){
+        $bannerWall.find('.box_right').click(function(){
             clearInterval(time);
             moveUp();
         });

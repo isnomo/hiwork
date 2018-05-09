@@ -98,6 +98,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin-top: 0;
   .cards-item{
     width: 31%;
     position: relative;
