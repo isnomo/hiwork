@@ -67,7 +67,21 @@
     setTimeout(function () {
       $('.banenr-main__floor img').removeClass('inShow')
     }, 1200)
-    // $('.solution-bg').css({'top' : $('.solution').offset().top - 150})
+
+    $('.project-map-control').on('click',function(){
+      setInterval(function(){
+        $('.project-map ul li').each(function(){
+          if($(this).hasClass('active')){
+            let itemIndex = $(this).index()
+            $('.project-control__item').children().eq(itemIndex).addClass('active').siblings().removeClass("active")
+          }
+        })
+      },200)
+    })
+    $('.project-control__item span').on('click',function(){
+      let clickIndex = $(this).index()
+      $('.box_button ul li').eq(clickIndex).click()
+    })
   })
 
   $(window).scroll(() => {

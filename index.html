@@ -187,7 +187,6 @@
       </div>
       <div class="project-map">
         <ul class="project-map-wall">
-
           <li class="project-map-item">
             <div class="hiwork-layout">
               <div class="project-map-item-wall">
@@ -202,11 +201,39 @@
               </div>
             </div>
           </li>
-
+          <li class="project-map-item">
+            <div class="hiwork-layout">
+              <div class="project-map-item-wall">
+                <div class="project-map-item__text">
+                  <h5>望京高和</h5>
+                  <p>北京市西城区新街口北大街3号新街高和</p>
+                  <img src="img/map//map1-icon.png" alt="">
+                </div>
+                <div class="project-map-item__img">
+                  <img src="img/map/map1.png" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project-map-item">
+            <div class="hiwork-layout">
+              <div class="project-map-item-wall">
+                <div class="project-map-item__text">
+                  <h5>三里屯高和</h5>
+                  <p>北京市西城区新街口北大街3号新街高和</p>
+                  <img src="img/map//map1-icon.png" alt="">
+                </div>
+                <div class="project-map-item__img">
+                  <img src="img/map/map1.png" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
-        <div class="hiwork-layout">
+      </div>
+      <div class="hiwork-layout">
           <div class="project-map-control">
-            <div class="project-map-control__left">
+            <div class="box_left">
               <svg width="13px" height="22px" viewBox="0 0 13 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
                 <desc>Created with Sketch.</desc>
@@ -221,14 +248,11 @@
                 </g>
               </svg>
             </div>
-            <div class="project-map-control__button">
+            <div class="project-map-control__button box_button">
               <ul class="list-inline">
-                <li class="active"></li>
-                <li></li>
-                <li></li>
               </ul>
             </div>
-            <div class="project-map-control__right">
+            <div class="box_right">
               <svg width="13px" height="22px" viewBox="0 0 13 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
                 <desc>Created with Sketch.</desc>
@@ -245,7 +269,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <section class="partners">
@@ -279,7 +302,21 @@
   <script src="js/less.min.js" data-env="production"></script>
   <script src="js/hiwork.js"></script>
   <script src="js/index.js"></script>
-  <!-- <script src="js/bannerList.js"></script> -->
+  <script src="js/carousel.js"></script>
+  <script>
+    $('.project-map-item').width(document.body.clientWidth)
+    carousel({
+      wall: $("#project"),
+      btnTab: '.box_button',
+      boxImg: '.project-map',
+      boxArrow: '.project-map-control',
+      // defaultActive: 1,
+      // hoverStop: true,
+      autoPlay: false,
+      timer: 3000,
+      speed: 700
+    });
+  </script>
 
 </body>
 

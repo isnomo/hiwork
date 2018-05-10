@@ -62,11 +62,11 @@
       </div>
     </div>
 
-    <div class="efficiency-carousel">
+    <div class="efficiency-carousel" id="carousel-layout">
       <h3>Functional layout</h3>
       <h4>功能布局的变化</h4>
       <div class="item__arrows">
-        <span>
+        <span class="box_left">
           <svg width="20px" height="13px" viewBox="0 0 20 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs></defs>
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -86,7 +86,7 @@
             </g>
           </svg>
         </span>
-        <span>
+        <span class="box_right">
           <svg width="20px" height="13px" viewBox="0 0 20 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs></defs>
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -251,9 +251,19 @@
   <!-- production -->
   <script src="js/less.min.js" data-env="production"></script>
   <script src="js/hiwork.js"></script>
+  <script src="js/carousel.js"></script>
   <!-- <script src="js/contact.js"></script> -->
-  <!-- <script src="js/bannerList.js"></script> -->
-
+  <script>
+    // carousel({
+    //   wall: $("#carousel-layout"),
+    //   // btnTab: $("#carousel-layout"),
+    //   boxImg: '.efficiency-carousel-main',
+    //   boxArrow: '.item__arrows',
+    //   defaultActive: 1,
+    //   timer: 3000,
+    //   speed: 300
+    // });
+  </script>
 </body>
 
 </html>

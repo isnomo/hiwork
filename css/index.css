@@ -349,8 +349,11 @@
   }
   .project-map{
     margin-top: 30px;
+    overflow: hidden;
     .project-map-wall{
+      // width: 3000px;
       .project-map-item{
+        float: left;
         background-image: url('../img/mapBg.png');
         background-position: center;
         background-repeat: no-repeat;
@@ -400,33 +403,34 @@
         }
       }
     }
-    .project-map-control{
-      width: 800px;
-      position: relative;
-      top: -100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .project-map-control__button{
-        margin: 0 60px;
-        ul{
-          li{
-            cursor: pointer;
-            margin: 0 8px;
-            width: 10px;
-            height: 10px;
-            background: rgba(255,255,255,0.5);
-            border-radius: 100%;
-            &.active{
-              background: rgba(255,255,255,1);
-            }
+  }
+  .project-map-control{
+    width: 800px;
+    position: relative;
+    top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .project-map-control__button{
+      margin: 0 60px;
+      ul{
+        li{
+          cursor: pointer;
+          margin: 0 8px;
+          width: 10px;
+          height: 10px;
+          background: rgba(255,255,255,0.5);
+          border-radius: 100%;
+          &.active{
+            background: rgba(255,255,255,1);
           }
         }
       }
-      .project-map-control__left,.project-map-control__right{
-        cursor: pointer;
-        margin-top: 5px;
-      }
+    }
+    .box_left,.box_right{
+      cursor: pointer;
+      margin-top: 5px;
+      user-select: none;
     }
   }
 
