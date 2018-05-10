@@ -1,5 +1,5 @@
 
-function carousel(option) {
+function carouselSmall(option) {
   // 轮播最外层
   let $bannerWall = option.wall
   // 轮播等待时间
@@ -7,7 +7,7 @@ function carousel(option) {
   // 滑动速度
   let moveSpeed = option.speed || 300
   // 小按钮dom
-  let $btnTab = $bannerWall.find(option.btnTab) || null
+  let $btnTab = $bannerWall.find(option.btnTab) || false
   // 轮播 ul父层dom
   let $boxImg = $bannerWall.find(option.boxImg) || null
   // 轮播左右切换按钮
@@ -24,20 +24,22 @@ function carousel(option) {
   // item 元素
   let liList = $boxImg.find("ul").find("li")
   // 轮播最后需要克隆的元素
-  let cloneOne = liList.first().clone()
+  let cloneFirst = liList.first().clone()
+  let cloneLast = liList.last().clone()
   // 获取 item 元素的宽
   let liWidth = liList.width()
   // 循环执行动画名称
   let timer = null
   // 当前active 的元素
-  let itemIndex = 0
+  let itemIndex = 1
   // item 数量
   let itemlength = liList.length
   console.log(itemlength)
   // 把克隆元素添加进ul
-  $boxImg.find("ul").append(cloneOne)
+  $boxImg.find("ul").prepend(cloneLast)
+  $boxImg.find("ul").append(cloneFirst)
   // 给ul宽度
-  $boxImg.find("ul").width(liWidth * (itemlength + 1))
+  $boxImg.find("ul").width(liWidth * (itemlength + 2))
 
   // 如果有圆点按钮就执行 圆点事件
   option.btnTab ? btnList() : btnList
@@ -67,7 +69,7 @@ function carousel(option) {
   // 滑动的动画
   function imgMove() {
     $boxImg.find('ul').find('li').eq(itemIndex).addClass("active").siblings().removeClass("active")
-    $boxImg.find("ul").css({ 'transform': 'translate3d(' + (- itemIndex * liWidth) + 'px,0,0)', 'transition-duration': moveSpeed + 'ms' })
+    $boxImg.find("ul").css({ 'transform': 'translate3d(' + (- (itemIndex - 1) * liWidth) + 'px,0,0)', 'transition-duration': moveSpeed + 'ms' })
     $btnTab.find('ul').find('li').eq(itemIndex).addClass("active").siblings().removeClass("active")
     console.log(itemIndex)
   }
@@ -83,7 +85,7 @@ function carousel(option) {
   // 下一张
   function moveDown() {
     itemIndex++
-    if (itemIndex == itemlength) {
+    if (itemIndex == itemlength - 1) {
       $boxImg.find("ul").css({ 'transform': 'translate3d(' + (- itemIndex * liWidth) + 'px,0,0)', 'transition-duration': moveSpeed + 'ms' })
       setTimeout(function () {
         $boxImg.find("ul").css({ 'transform': 'translate3d(' + 0 + 'px,0,0)', 'transition-duration': 0 + 'ms' })

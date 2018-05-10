@@ -82,58 +82,61 @@
     }
     .efficiency-carousel-main{
       padding-top: 80px;
-      overflow-x: hidden;
+      overflow: hidden;
       height: 680px;
       width: 100%;
       ul{
-        width: 2000px;
+        // width: 2000px;
         
         li{
-          width: 330px;
-          background: #FFFFFF;
-          border: 1px solid rgba(195, 195, 195, 0.48);
-          border-radius: 6px;
-          margin-right: 60px;
-          transition: all .3s ease-out;
+          width: 390px;
+          &.active .item-wall{
+            transform: scale(1.1);
+          }
           &:last-child{
             // margin-right: 0;
           }
-          &.active{
-            transform: scale(1.1);
-          }
-          .item-img{
-            padding: 30px 15px;
-            img{
-              width: 100%;
+          .item-wall{
+            background: #FFFFFF;
+            border: 1px solid rgba(195, 195, 195, 0.48);
+            transition: all .3s ease-out;
+            transform: scale(1);
+            margin-right: 60px;
+            border-radius: 6px;
+            .item-img{
+              padding: 30px 15px;
+              img{
+                width: 100%;
+              }
             }
-          }
-          .item-text{
-            background: #93D2E9;
-            padding: 50px 35px 40px;
-            position: relative;
-            height: 250px;
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-            p{
-              font-size: 1.4rem;
-              letter-spacing: 1.7px;
-              text-align: justify;
-              line-height: 24px;
-              margin-bottom: 5px;
-            }
-            .item-text__icon{
-              position: absolute;
-              background: #009944;
-              color: #FFFFFF;
-              width: 54px;
-              height: 54px;
-              border-radius: 100%;
-              font-family: DIN-Bold;
-              font-size: 4rem;
-              text-align: center;
-              top: -27px;
-              left: 50%;
-              margin-left: -27px;
+            .item-text{
+              background: #93D2E9;
+              padding: 50px 35px 40px;
+              position: relative;
+              height: 250px;
+              border-bottom-left-radius: 6px;
+              border-bottom-right-radius: 6px;
+              p{
+                font-size: 1.4rem;
+                letter-spacing: 1.7px;
+                text-align: justify;
+                line-height: 24px;
+                margin-bottom: 5px;
+              }
+              .item-text__icon{
+                position: absolute;
+                background: #009944;
+                color: #FFFFFF;
+                width: 54px;
+                height: 54px;
+                border-radius: 100%;
+                font-family: DIN-Bold;
+                font-size: 4rem;
+                text-align: center;
+                top: -27px;
+                left: 50%;
+                margin-left: -27px;
+              }
             }
           }
         }
