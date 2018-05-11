@@ -8,7 +8,7 @@
   <meta name="renderer" content="webkit" />
   <meta name="keywords" content="HiWork 基础空间 组合场景 插件模块 办公区 写字楼 办公平台">
   <meta name="description" content="HiWork是未来办公空间解决方案提供商，面向未来的城市办公新生态。">
-  <link rel="icon" href="img/icon.png">
+  <link rel="icon" href="img/favicon.png">
   <title>联系我们 - HiWork – 未来办公空间解决方案提供商</title>
 
   <!-- CSS -->
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-
+    <div class="loading"></div>
   <div class="banner">
     <!-- 头部导航栏 -->
     <header class="header-wall"></header>
@@ -83,7 +83,11 @@
   <script src="js/hiwork.js"></script>
   <!-- <script src="js/contact.js"></script> -->
   <!-- <script src="js/bannerList.js"></script> -->
-
+  <script>
+    $(window).load(() => {
+      $('.banner .banner-main h3').css({ 'color': 'rgba(255,255,255,1)', 'transform': 'scale(1)','letter-spacing':'7px'})
+    })
+  </script>
 </body>
 
 </html>

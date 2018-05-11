@@ -8,7 +8,7 @@
   <meta name="renderer" content="webkit" />
   <meta name="keywords" content="HiWork 基础空间 组合场景 插件模块 办公区 写字楼 办公平台">
   <meta name="description" content="HiWork是未来办公空间解决方案提供商，面向未来的城市办公新生态。">
-  <link rel="icon" href="img/icon.png">
+  <link rel="icon" href="img/favicon.png">
   <title>更高效率 - HiWork – 未来办公空间解决方案提供商</title>
 
   <!-- CSS -->
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-
+    <div class="loading"></div>
   <div class="banner">
     <!-- 头部导航栏 -->
     <header class="header-wall"></header>
@@ -160,7 +160,7 @@
       </div>
     </div>
 
-    <div class="efficiency-carousel">
+    <div class="efficiency-carousel" id="carousel-Changes">
       <h3>Changes in the process</h3>
       <h4>使用过程中的变化</h4>
       <div class="item__arrows">
@@ -205,7 +205,57 @@
           </svg>
         </span>
       </div>
-
+      <div class="efficiency-carousel-main">
+          <ul class="list-inline">
+            <li>
+              <div class="item-wall">
+                <div class="item-img">
+                  <img src="img/carousel1.png" alt="">
+                </div>
+                <div class="item-text">
+                  <div class="item-text__icon">A</div>
+                  <p>通过对吊顶的处理,空间分隔墙可以根据租户需求自由组合,形成多种空间模式;多房间\多工位,根据租户的需求调整。</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-wall">
+                <div class="item-img">
+                  <img src="img/carousel2.png" alt="">
+                </div>
+                <div class="item-text">
+                  <div class="item-text__icon">B</div>
+                  <p>吊顶的特殊处理和机电布置给百变提供可能</p>
+                  <p>a. 根据空间组合的需要做了可容纳多种空间组合的隔墙轨道,隔墙根据这些轨道自由组合,增减，同时有效的起到隔声作用；</p>
+                </div>
+              </div>
+  
+            </li>
+            <li>
+              <div class="item-wall">
+                <div class="item-img">
+                  <img src="img/carousel1.png" alt="">
+                </div>
+                <div class="item-text">
+                  <div class="item-text__icon">B</div>
+                  <p>b. 空调:通过中部吊顶,周围裸顶,将空调风口,检修都放置在周边裸顶区域,保证巧妙的保证完整的空间效果同时解决空调送风的灵活性问题; </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-wall">
+                <div class="item-img">
+                  <img src="img/carousel1.png" alt="">
+                </div>
+                <div class="item-text">
+                  <div class="item-text__icon">B</div>
+                  <p>b. 空调:通过中部吊顶,周围裸顶,将空调风口,检修都放置在周边裸顶区域,保证巧妙的保证完整的空间效果同时解决空调送风的灵活性问题; </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
     </div>
   </section>
 
@@ -221,8 +271,22 @@
   <script src="js/hiwork.js"></script>
   <script src="js/carouselSmall.js"></script>
   <script>
+    $(window).load(() => {
+      $('.banner .banner-main h3').css({ 'color': 'rgba(255,255,255,1)', 'transform': 'scale(1)','letter-spacing':'7px'})
+    })
     carouselSmall({
       wall: $("#carousel-layout"),
+      // btnTab: '.box_button',
+      boxImg: '.efficiency-carousel-main',
+      boxArrow: '.item__arrows',
+      defaultActive: 1,
+      // hoverStop: true,
+      autoPlay: false,
+      timer: 3000,
+      speed: 700
+    });
+    carouselSmall({
+      wall: $("#carousel-Changes"),
       // btnTab: '.box_button',
       boxImg: '.efficiency-carousel-main',
       boxArrow: '.item__arrows',

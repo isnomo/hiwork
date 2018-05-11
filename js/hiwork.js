@@ -48,7 +48,7 @@
 
   $(window).load(() => {
     // showImages (); 
-
+    $('.loading').fadeOut(300)
   })
 
   // 导航

@@ -24,8 +24,8 @@ function carouselSmall(option) {
   // item 元素
   let liList = $boxImg.find("ul").find("li")
   // 轮播最后需要克隆的元素
-  let cloneFirst = liList.first().clone()
-  let cloneLast = liList.last().clone()
+  // let cloneFirst = liList.first().clone()
+  // let cloneLast = liList.last().clone()
   // 获取 item 元素的宽
   let liWidth = liList.width()
   // 循环执行动画名称
@@ -36,10 +36,10 @@ function carouselSmall(option) {
   let itemlength = liList.length
   console.log(itemlength)
   // 把克隆元素添加进ul
-  $boxImg.find("ul").prepend(cloneLast)
-  $boxImg.find("ul").append(cloneFirst)
+  // $boxImg.find("ul").prepend(cloneLast)
+  // $boxImg.find("ul").append(cloneFirst)
   // 给ul宽度
-  $boxImg.find("ul").width(liWidth * (itemlength + 2))
+  $boxImg.find("ul").width(liWidth * (itemlength))
 
   // 如果有圆点按钮就执行 圆点事件
   option.btnTab ? btnList() : btnList
@@ -85,14 +85,9 @@ function carouselSmall(option) {
   // 下一张
   function moveDown() {
     itemIndex++
-    if (itemIndex == itemlength - 1) {
-      $boxImg.find("ul").css({ 'transform': 'translate3d(' + (- itemIndex * liWidth) + 'px,0,0)', 'transition-duration': moveSpeed + 'ms' })
-      setTimeout(function () {
-        $boxImg.find("ul").css({ 'transform': 'translate3d(' + 0 + 'px,0,0)', 'transition-duration': 0 + 'ms' })
-        $boxImg.find('ul').find('li').eq(0).addClass("active").siblings().removeClass("active")
-        $btnTab.find('ul').find('li').eq(0).addClass("active").siblings().removeClass("active")
-        itemIndex = 0
-      }, moveSpeed + 10)
+    if (itemIndex >= itemlength) {
+      itemIndex--
+      return false
     } else {
       imgMove()
     }
@@ -102,13 +97,8 @@ function carouselSmall(option) {
   function moveUp() {
     itemIndex--
     if (itemIndex < 0) {
-      $boxImg.find("ul").css({ 'transform': 'translate3d(' + (- (itemlength) * liWidth) + 'px,0,0)', 'transition-duration': 0 + 'ms' })
-      setTimeout(function () {
-        $boxImg.find("ul").css({ 'transform': 'translate3d(' + (- (itemlength - 1) * liWidth) + 'px,0,0)', 'transition-duration': moveSpeed + 'ms' })
-        $boxImg.find('ul').find('li').eq(itemlength - 1).addClass("active").siblings().removeClass("active")
-        $btnTab.find('ul').find('li').eq(itemlength - 1).addClass("active").siblings().removeClass("active")
-        itemIndex = itemlength - 1
-      }, 10)
+      itemIndex++
+      return false
     } else {
       imgMove()
     }
