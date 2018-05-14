@@ -43,7 +43,12 @@
   $(window).scroll(() => {
     // showImages ();
     var toTop = $(this).scrollTop();
-
+    
+    if(toTop > window.innerHeight){
+      $('.smallNav').addClass('active')
+    }else{
+      $('.smallNav').removeClass('active')
+    }
   })
 
   $(window).load(() => {
@@ -54,13 +59,20 @@
   // 导航
   $(".header-wall").load("header.html", () => {
     // console.log("导航栏加载成功");
-    $('.header-nav>ul>li').hover(function(){
+    $('.header-wall .header-nav>ul>li').hover(function(){
       $(this).find('.drop-menu').stop().fadeIn();
     },function(){
       $(this).find('.drop-menu').stop().fadeOut();
     });
   });
-
+  $(".smallNav").load("header.html", () => {
+    // console.log("导航栏加载成功");
+    $('.smallNav .header-nav>ul>li').hover(function(){
+      $(this).find('.drop-menu').stop().fadeIn();
+    },function(){
+      $(this).find('.drop-menu').stop().fadeOut();
+    });
+  });
   $("footer").load("footer.html", () => {
     // console.log("手机导航加载成功");
   });

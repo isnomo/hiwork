@@ -13,6 +13,7 @@
       padding: 30px 35px;
       width: 48%;
       position: relative;
+      height: 566px;
       .item__text__title{
         border-bottom: 3px solid #009944;
         padding-bottom: 5px;
@@ -39,15 +40,19 @@
         text-align: justify;
         line-height: 24px;
         width: 220px;
+        margin-bottom: 20px;
       }
       .item__arrows{
         position: absolute;
         right: 35px;
         bottom: 30px;
-        span{
-          cursor: pointer;
-          &:last-child{
-            margin-left: 50px;
+        a{
+          font-family: DIN-Bold;
+          font-size: 14px;
+          color: #009944;
+          letter-spacing: 0.23px;
+          svg{
+            margin-left: 5px;
           }
         }
       }
@@ -89,10 +94,13 @@
         }
         .item__arrows{
           float: right;
-          span{
-            cursor: pointer;
-            &:last-child{
-              margin-left: 50px;
+          a{
+            font-family: DIN-Bold;
+            font-size: 14px;
+            color: #009944;
+            letter-spacing: 0.23px;
+            svg{
+              margin-left: 5px;
             }
           }
         }

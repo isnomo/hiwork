@@ -95,13 +95,12 @@
       $('.solution-bg').css({'display' : 'none'})
     }
 
-
-
     if (toTop < 1000) {
       $('.bannerBack').css({'display' : 'block'})
       $('.banenr-main__floor').css({'transform' : 'translateY(-'+ toTop / 6 +'px)'})
       $('.bannerBack').css({'transform' : 'translateY(-'+ toTop / 10 +'px)'})
     }
     
+
   })
 })()
