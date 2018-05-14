@@ -1,11 +1,19 @@
 (function () {
 
   $(window).load(() => {
-    $('#videpStart').on('click',function(){
+    $('#videpStart svg').on('click',function(){
       $('.video-module').fadeIn(400)
+      let videoPlay = document.getElementById('video')
+      setTimeout(() => {
+        videoPlay.play()
+      }, 300);
     })
     $('.video-module .video-module-main .module-close').on('click',function(){
-      $('.video-module').fadeOut(400)
+      let videoPlay = document.getElementById('video')
+      videoPlay.pause()
+      setTimeout(() => {
+        $('.video-module').fadeOut(400)
+      }, 300);
     })
   })
 

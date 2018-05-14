@@ -9,7 +9,9 @@
       display: block;
       text-align: center;
       margin: 100px auto 30px;
-      cursor: pointer;
+      svg{
+        cursor: pointer;
+      }
     }
     h3{
       font-weight: 600;
@@ -97,6 +99,24 @@
           &:last-child{
             // margin-right: 0;
           }
+          &:nth-child(1) .item-wall{
+            background-image: url('../img/eff1.png');
+            background-position: right bottom;
+            background-size: 180px;
+            background-repeat: no-repeat;
+          }
+          &:nth-child(2) .item-wall{
+            background-image: url('../img/eff2.png');
+            background-position: right center;
+            background-size: 120px;
+            background-repeat: no-repeat;
+          }
+          &:nth-child(3) .item-wall{
+            background-image: url('../img/eff3.png');
+            background-position: right 260px;
+            background-size: 160px;
+            background-repeat: no-repeat;
+          }
           .item-wall{
             background: #FFFFFF;
             border: 1px solid rgba(195, 195, 195, 0.48);
@@ -104,39 +124,33 @@
             transform: scale(1);
             margin-right: 60px;
             border-radius: 6px;
-            .item-img{
-              padding: 30px 15px;
-              img{
-                width: 100%;
+            padding: 15px 80px 15px 30px;
+            height: 500px;
+            .item-title{
+              display: inline-block;
+              border-bottom: 3px solid #009944;
+              padding-bottom: 3px;
+              margin-bottom: 15px;
+              h5{
+                font-weight: 600;
+                font-size: 1.6rem;
+                letter-spacing: 1.7px;
+                line-height: 24px;
               }
             }
-            .item-text{
-              background: #93D2E9;
-              padding: 50px 35px 40px;
-              position: relative;
-              height: 250px;
-              border-bottom-left-radius: 6px;
-              border-bottom-right-radius: 6px;
+            p{
+              font-size: 1.4rem;
+              letter-spacing: 1.5px;
+              text-align: justify;
+              line-height: 24px;
+            }
+            .list{
+              margin-top: 20px;
               p{
-                font-size: 1.4rem;
-                letter-spacing: 1.7px;
+                font-size: 1.7rem;
+                letter-spacing: 2.07px;
                 text-align: justify;
-                line-height: 24px;
-                margin-bottom: 5px;
-              }
-              .item-text__icon{
-                position: absolute;
-                background: #009944;
-                color: #FFFFFF;
-                width: 54px;
-                height: 54px;
-                border-radius: 100%;
-                font-family: DIN-Bold;
-                font-size: 4rem;
-                text-align: center;
-                top: -27px;
-                left: 50%;
-                margin-left: -27px;
+                line-height: 32px;
               }
             }
           }

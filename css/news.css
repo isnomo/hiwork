@@ -1,0 +1,136 @@
+.banner{
+  height: 600px;
+  overflow-y: hidden;
+  background-image: url('../img/worth.png');
+  background-position: center;
+  background-size: cover;
+  .banner-main{
+    margin-top: 120px;
+    h3{
+      font-weight: 600;
+      font-size: 5.7rem;
+      letter-spacing: 10px;
+      text-align: center;
+      color: rgba(0,0,0,.1);
+      transform: scale(1.2);
+      transition: all 2s ease-out;
+    }
+  }
+}
+.news-main{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; 
+  .news-content{
+    width: 65%;
+    .news-content-title{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      p{
+        font-size: 1.4rem;
+        color: #8F908A;
+        letter-spacing: 1.1px;
+        text-align: justify;
+        line-height: 24px;
+      }
+    }
+    .news-content-text{
+      padding: 10px 0;
+      margin: 10px 0;
+      border-top: 1px solid #c3c3c3;
+      border-bottom: 1px solid #c3c3c3;
+      color: #333;
+      p{
+        font-size: 1.4rem;
+        letter-spacing: 1.1px;
+        text-align: justify;
+        line-height: 24px;
+        margin: 20px 0;
+      }
+      img{
+        width: 100%;
+        margin: 15px 0;
+      }
+      h6{
+        font-size: 1.4rem;
+        letter-spacing: 1.1px;
+        text-align: justify;
+        line-height: 24px;
+      }
+      ul{
+        margin: 20px 0;
+        li{
+          font-size: 1.4rem;
+          letter-spacing: 1.1px;
+          text-align: justify;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .news-list{
+    width: 30%;
+    .news-list-item{
+      margin-bottom: 40px;
+      img{
+        width: 100%;
+      }
+      .news-list-item__text{
+        margin: 10px 0;
+        padding-left: 10px;
+        border-left: 3px solid #009944;
+        h5{
+         font-weight: 600;
+          font-size: 14px;
+          letter-spacing: 1.02px;
+          line-height: 22px;
+          color: #000000;
+        }
+      }
+      span{
+        display: block;
+        text-align: right;
+        font-family: DIN-Bold;
+        font-size: 14px;
+        color: #009944;
+        letter-spacing: 0.23px;
+        svg{
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+/*电脑*/
+@media screen  and (min-width:1400px){
+}
+/*笔记本*/
+@media screen and (max-width: 1399px) and (min-width: 1200px){
+   
+}
+@media screen and (max-width: 1199px) and (min-width: 1023px){
+}  
+/*横向平板*/
+@media screen and (max-width: 1099px) and (min-width: 1023px){
+}   
+ 
+/*平板*/
+@media screen and (max-width: 1023px) and (min-width: 768px){
+}
+/*笔记本高度*/
+@media screen and (max-height: 767px) and (min-height: 600px){
+
+}
+/*手机*/
+@media screen and (max-width: 767px){
+}
+
+@media screen and (max-width: 320px){
+}
