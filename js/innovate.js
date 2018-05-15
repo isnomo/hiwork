@@ -1,4 +1,28 @@
 (function () {
+  // function drawHtml(val) {
+  //   $('.floor-carousel-main > ul').html('');
+  //   $('.floor-carousel-control .box_button > ul').html('');
+  //   let floorHtml = '';
+  //   for (let i = 0; i < floorData.length; i++) {
+  //     let floorList = floorData[i];
+  //     if (val == floorList.floorNum) {
+  //       for (let f = 0; f < floorList.data.length; f++) {
+  //         let floorItem = floorList.data[f];
+  //         floorHtml += `<li>
+  //                         <div class="item-img">
+  //                           <img src="img/${floorItem.img}" class="" alt="">
+  //                         </div>
+  //                         <div class="item-text">
+  //                           <h6>${floorItem.title}</h6>
+  //                           <p>${floorItem.text}</p>
+  //                         </div>
+  //                       </li>`;
+  //       }
+  //       $('.floor-carousel-main > ul').html(floorHtml);
+  //     }
+  //   }
+  // }
+
   function canvasRound(bgId,textId,deg) {
     let c = document.getElementById(bgId);
     let text = document.getElementById(textId);
@@ -55,23 +79,23 @@
       let hoverIndex = $(this).index()
       $(this).addClass('active').siblings().removeClass("active")
       $('.floor-main .floor-main-wall .floor-bg-img img.floor-bg-colours').eq(hoverIndex).addClass('active').siblings().removeClass("active")
-      $(this).find('.btn').on('click', function () {
-        let clickIndex = $(this).index()
+    })
 
-        let floorNum = $(this).parent('.floor-bg-div__item').attr('data-floor') - 1
-        $('.floor-carousel').css({ 'top': floorNum * 200 }).fadeIn(300)
-      })
+    $('.floor-main .floor-main-wall .floor-bg-div .floor-bg-div__item .btn').on('click', function () {
+      let clickIndex = $(this).index()
+      let floorNum = $(this).parent('.floor-bg-div__item').attr('data-floor') - 1
+
+      $('#floor-carousel-' + floorNum +' .floor-carousel-wall .floor-carousel-control .box_button ul li').eq(clickIndex).click()
+      $('#floor-carousel-' + floorNum ).fadeIn(300)
     })
     $('.floor-carousel .floor-carousel-wall .floor-carousel-close').on('click', function () {
       $('.floor-carousel').fadeOut(300)
     })
 
-    setTimeout(function(){
-      canvasRound('item1','text1',66);
-      canvasRound('item2','text2',70);
-      canvasRound('item3','text3',61);
-      canvasRound('item4','text4',77);
-    },2000)
+    canvasRound('item1','text1',66);
+    canvasRound('item2','text2',70);
+    canvasRound('item3','text3',61);
+    canvasRound('item4','text4',77);
   })
 
   $(window).scroll(() => {

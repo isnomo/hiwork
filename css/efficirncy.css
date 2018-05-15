@@ -107,13 +107,16 @@
           }
           &:nth-child(2) .item-wall{
             background-image: url('../img/eff2.png');
-            background-position: right center;
+            background-position: right 200px;
             background-size: 120px;
             background-repeat: no-repeat;
+            p{
+              font-size: 1.2rem;
+            }
           }
           &:nth-child(3) .item-wall{
             background-image: url('../img/eff3.png');
-            background-position: right 260px;
+            background-position: right 300px;
             background-size: 160px;
             background-repeat: no-repeat;
           }
@@ -125,7 +128,7 @@
             margin-right: 60px;
             border-radius: 6px;
             padding: 15px 80px 15px 30px;
-            height: 500px;
+            height: 520px;
             .item-title{
               display: inline-block;
               border-bottom: 3px solid #009944;

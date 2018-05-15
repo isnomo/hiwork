@@ -62,6 +62,7 @@
         padding-top: 25px;
         h4{
           font-family: DIN-Bold;
+          padding-left: 22px;
           b{
             font-size: 8.6rem;
             letter-spacing: -2px;
@@ -181,8 +182,8 @@
         }
         .btn{
           transform: skew(60deg, -9deg) scale(1) translate(0, 0);
-          width: 29px;
-          height: 29px;
+          width: 30px;
+          height: 30px;
           position: absolute;
           border-radius: 100%;
           border: 1px solid transparent;
@@ -209,14 +210,10 @@
       }
       .floor-1{
         .btn:nth-child(1){
-          top: 50px;
-          left: 150px;
+          top: 80px;
+          left: 320px;
         }
         .btn:nth-child(2){
-          top: 70px;
-          left: 530px;
-        }
-        .btn:nth-child(3){
           top: 10px;
           left: 650px;
         }
@@ -224,23 +221,35 @@
       .floor-2{
         .btn:nth-child(1){
           top: 120px;
-          left: 220px;
+          left: 450px;
         }
         .btn:nth-child(2){
           top: 80px;
-          left: 530px;
+          left: 740px;
         }
       }
       .floor-3{
         .btn:nth-child(1){
+          top: 40px;
+          left: 120px;
+        }
+        .btn:nth-child(2){
           top: 70px;
           left: 450px;
+        }
+        .btn:nth-child(3){
+          top: 130px;
+          left: 840px;
         }
       }
       .floor-4{
         .btn:nth-child(1){
-          top: 60px;
-          left: 320px;
+          top: 95px;
+          left: 380px;
+        }
+        .btn:nth-child(2){
+          top: 50px;
+          left: 640px;
         }
       }
     }
@@ -254,6 +263,15 @@
     background: rgba(0,153,68,0.91);
     width: 100%;
     padding: 40px 0;
+    &#floor-carousel-1{
+      top: 200px;
+    }
+    &#floor-carousel-2{
+      top: 380px;
+    }
+    &#floor-carousel-3{
+      top: 500px;
+    }
     .floor-carousel-wall{
       width: 900px;
       margin: 0 auto;

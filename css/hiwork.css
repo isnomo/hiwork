@@ -165,7 +165,20 @@ a:focus{
     padding: 15px;
   }
 }
+::selection {
+  background:rgba(138, 238, 116, 0.4);; 
+  // color:#fff;
+}
 
+::-moz-selection {
+  background:rgba(138, 238, 116, 0.4);; 
+  // color:#fff;
+}
+
+::-webkit-selection {
+  background:rgba(138, 238, 116, 0.4);; 
+  // color:#fff;
+}
 section{
   margin: 60px auto;
 }
@@ -246,7 +259,11 @@ section{
     }
   }
   .footer-right{
+    img{
+      width: 230px;
+    }
     p{
+      margin-top: 5px;
       font-family: DIN-Regular;
       font-size: 1.3rem;
       color: #000000;
