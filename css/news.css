@@ -1,7 +1,13 @@
+.news-0{
+  background-image: url('../img/news/news1.png');
+}
+.news-1{
+  background-image: url('../img/news/news2.png');
+}
 .banner{
   height: 600px;
   overflow-y: hidden;
-  background-image: url('../img/worth.png');
+  // background-image: url('../img/worth.png');
   background-position: center;
   background-size: cover;
   .banner-main{

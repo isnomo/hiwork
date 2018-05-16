@@ -1,8 +1,13 @@
 (function () {
     // 楼层介绍
-    return floorData = [
+    return newsData = [
         {
-            'floorNum': 0,
+            'id': 0,
+            'title': '未来办公创新平台——引导城市快速变革中的产业升级',
+            'bannerImg': 'news1.png',
+            'listImg': 'listNews1.png',
+            'adImg': 'adNews1.png',
+            'time': '2018/5/10', 
             'data': [
                 {
                     'title': `WELLBEING健康娱乐`,
