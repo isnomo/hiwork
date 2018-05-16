@@ -220,10 +220,14 @@
       }
       .floor-2{
         .btn:nth-child(1){
+          top: 50px;
+          left: 70px;
+        }
+        .btn:nth-child(2){
           top: 120px;
           left: 450px;
         }
-        .btn:nth-child(2){
+        .btn:nth-child(3){
           top: 80px;
           left: 740px;
         }
@@ -234,10 +238,6 @@
           left: 120px;
         }
         .btn:nth-child(2){
-          top: 70px;
-          left: 450px;
-        }
-        .btn:nth-child(3){
           top: 130px;
           left: 840px;
         }
