@@ -2,7 +2,7 @@
 
   $(window).load(() => {
     $('#videpStart svg').on('click',function(){
-      $('.video-module').fadeIn(400)
+      $('.video-module').fadeIn(300)
       let videoPlay = document.getElementById('video')
       setTimeout(() => {
         videoPlay.play()
@@ -11,9 +11,7 @@
     $('.video-module .video-module-main .module-close').on('click',function(){
       let videoPlay = document.getElementById('video')
       videoPlay.pause()
-      setTimeout(() => {
-        $('.video-module').fadeOut(400)
-      }, 300);
+      $('.video-module').fadeOut(300)
     })
   })
 
