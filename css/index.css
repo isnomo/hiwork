@@ -57,6 +57,9 @@
         }
       }
     }
+    .banenr-main__phoneFloor{
+      display: none;
+    }
     .banenr-main__floor{
       position: relative;
       width: 70%;
@@ -204,6 +207,9 @@
     width: 85%;
     display: block;
     margin: auto
+  }
+  .tagline-phone{
+    display: none;
   }
 }
 .solution-bg{
@@ -507,6 +513,242 @@
 }
 /*手机*/
 @media screen and (max-width: 767px){
+  .banner .banner-main .banenr-main__floor{
+    display: none;
+  }
+  .banner .banner-main{
+    flex-wrap: wrap;
+    .banenr-main__text{
+      width: 100%;
+      margin-top: 10px;
+      h2{
+        background-position: right center;
+        width: 85%;
+      }
+      p{
+        font-size: 1.4rem;
+        letter-spacing: 1.02px;
+        line-height: 2.3rem;
+        width: 65%;
+      }
+    }
+    .banenr-main__phoneFloor{
+      display: block;
+      margin-top: 20px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .cards{
+    flex-wrap: wrap;
+    .cards-item{
+      width: 100%;
+      margin-top: 0px;
+      margin-bottom: 15px;
+      &:first-child{
+        margin-top: -80px;
+      }
+      &:hover{
+        .cards-item__text{
+          span{
+            i{
+              transform: translateX(0);
+            }
+          }
+        }
+        .cards-item__img{
+          transform: scale(1);
+        }
+      }
+      .cards-item__text{
+        position: absolute;
+        z-index: 2;
+        padding: 22px 25px;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        p{
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  .tagline{
+    margin-bottom: 0;
+    padding-bottom: 60px;
+    h3{
+      font-size: 3rem;
+      letter-spacing: 1.7px;
+      line-height: 39px;
+      width: 100%;
+    }
+    h4{
+      font-size: 1.4rem;
+      color: #009944;
+      letter-spacing: 11px;
+      line-height: 20px;
+      margin: 5px auto 45px;
+    }
+    .tagline-icon{
+      display: none
+    }
+    .tagline-phone{
+      width: 65%;
+      display: block;
+      margin: auto
+    }
+  }
+  .solution{
+    // background: #009944;
+    padding: 48px 15px;
+    .solution-item{
+      padding: 20px 25px;
+      width: 100%;
+      background-size: 150px;
+  
+      .solution-item__title{
+        margin-bottom: 30px;
+      }
+      h3{
+        font-weight: 600;
+        font-size: 2.4rem;
+        color: #000000;
+        letter-spacing: 1.76px;
+        line-height: 35px;
+        width: 230px;
+        margin-bottom: 10px;
+      }
+      p{
+        margin-bottom: 60px;
+      }
+    }
+  }
+  .project{
+    margin-top: 0;
+    padding-top: 80px;
+    .project-title{
+      font-size: 2.3rem;
+      letter-spacing: 1.08px;
+      line-height: 24px;
+    }
+    .project-control{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; 
+      flex-wrap: wrap;
+      h4{
+        font-size: 3.7rem;
+        letter-spacing: 0.62px;
+        margin-right: 34px;
+      }
+      b{
+        display: none;
+      }
+      .project-control__select{
+        width: 100%;
+      }
+      .project-control__item{
+        margin-left: 0;
+        margin-top: 15px;
+        span{
+          display: inline-block;
+          padding: 5px 30px;
+        }
+      }
+    }
+    .project-map{
+      margin-top: 20px;
+      overflow: hidden;
+      .project-map-wall{
+        // width: 3000px;
+        .project-map-item{
+          background-image: url('../img/mapBg.png');
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-size: 120%;
+          padding: 180px 0 40px;
+          background-color: #009944;
+
+          .project-map-item-wall{
+            width: 100%;
+            flex-wrap: wrap;
+            background-image: url(../img/mapItemBg2.png);
+            background-position: top right;
+            background-size: 200px;
+  
+            .project-map-item__text{
+              width: 100%;
+              h5{
+                display: inline-block;
+                font-weight: 600;
+                font-size: 2.4rem;
+                color: #000000;
+                letter-spacing: 0.4px;
+                padding-bottom: 5px;
+                border-bottom: 3px solid #009944;
+              }
+              p{
+                line-height: 22px;
+                margin: 10px 0 30px;
+                width: 65%;
+              }
+              img{
+                width: 60%;
+              }
+            }
+            .project-map-item__img{
+              width: 100%;
+              margin-top: 30px;
+              img{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .project-map-control{
+
+      .project-map-control__button{
+       
+        ul{
+          li{
+           
+          }
+        }
+      }
+      .box_left,.box_right{
+        
+      }
+    }
+  
+  }
+  .partners{
+    margin-bottom: 0;
+    h3{
+      font-size: 3rem;
+      letter-spacing: 1.41px;
+      line-height: 40px;
+    }
+    h4{
+      font-size: 2.1rem;
+      letter-spacing: 1.54px;
+      line-height: 21px;
+    }
+    .partners-icon{
+      padding: 40px 0 40px;
+      margin-top: 20px;
+      background-image: url('../img/phonePartners.png');
+      .partners-icon-wall{
+        flex-wrap: wrap;
+        img{
+          margin-bottom: 20px;
+          width: 49%;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 320px){

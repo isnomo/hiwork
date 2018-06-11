@@ -1,6 +1,7 @@
 (function () {
   var winWidth = 0;
   var winHeight = 0;
+  var pcUrl = window.location.pathname
   function findDimensions() { //函数：获取尺寸
     //获取窗口宽度
     if (window.innerWidth)
@@ -20,11 +21,13 @@
     //结果输出至两个文本框
     console.log(winHeight)
     console.log(winWidth)
-
-    if (winWidth < 768) {
+    if(pcUrl != '/phone.html'){
+      if (winWidth < 1000) {
+        // location.href = 'phone.html'
+      }
     }
-
   }
+  
 
   function showImages() {
     var images = document.getElementsByClassName('isShow');
@@ -46,8 +49,10 @@
     
     if(toTop > window.innerHeight){
       $('.smallNav').addClass('active')
+      $('.smallPhone').addClass('active')
     }else{
       $('.smallNav').removeClass('active')
+      $('.smallPhone').removeClass('active')
     }
   })
 
@@ -74,7 +79,52 @@
     });
   });
   $("footer").load("footer.html", () => {
+
+  });
+  $(".phone-wall").load("phoneHeader.html", () => {
     // console.log("手机导航加载成功");
+    let isOpen = false;
+    $('.phone-wall .menu-btn').on('click',toggleMenu);	
+    function toggleMenu() {
+      if( isOpen ) {
+          $('html').removeClass('show-menu');
+          $('.phone-wall .menu-btn').removeClass('btn-close');
+      }else {
+          $('html').addClass('show-menu');
+          $('.phone-wall .menu-btn').addClass('btn-close');
+      }
+      isOpen = !isOpen;
+    }
+
+    $('.phone-wall .phoneHeader .menu-btn').on('click',function(){
+      $('.phone-wall .phoneHeader .menu-main').stop().slideToggle(300)
+    })
+    $('.phone-wall .phoneHeader .menu-main li').on('click',function(){
+      $(this).find('.menu-main__item').stop().slideToggle(300)
+    })
+  });
+
+  $(".smallPhone").load("phoneHeader.html", () => {
+    // console.log("手机导航加载成功");
+    let smisOpen = false;
+    $('.smallPhone .menu-btn').on('click',toggleMenu);	
+    function toggleMenu() {
+      if( smisOpen ) {
+          $('html').removeClass('show-menu');
+          $('.smallPhone .menu-btn').removeClass('btn-close');
+      }else {
+          $('html').addClass('show-menu');
+          $('.smallPhone .menu-btn').addClass('btn-close');
+      }
+      smisOpen = !smisOpen;
+    }
+
+    $('.smallPhone .phoneHeader .menu-btn').on('click',function(){
+      $('.smallPhone .phoneHeader .menu-main').stop().slideToggle(300)
+    })
+    $('.smallPhone .phoneHeader .menu-main li').on('click',function(){
+      $(this).find('.menu-main__item').stop().slideToggle(300)
+    })
   });
 
   // 初始化函数
@@ -84,7 +134,6 @@
     $(window).resize(() => {
       findDimensions()
     })
-
     if (window.devicePixelRatio > 1) {
       var images = $("img.retina");
       images.each(function (i) {

@@ -1,4 +1,11 @@
 (function () {
+  $.getUrlParam = function (name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象 
+    var r = window.location.search.substr(1).match(reg);    //匹配目标参数
+    if (r != null) return decodeURI(r[2]); return null;      //返回参数值
+  };
+  //得到url参数
+  var urltype = $.getUrlParam('city');
   // 首页banner房子跟随浮动
   let inTime = 0
   $('#indexBanner').mousemove((e) => {
@@ -82,15 +89,29 @@
       let clickIndex = $(this).index()
       $('.box_button ul li').eq(clickIndex).click()
     })
+    if(urltype == 'sh'){
+      changeSH()
+      $('#project__select').val('上海')
+    }
+    if(urltype == 'bj'){
+      changeBJ()
+      $('#project__select').val('北京')
+    }
   })
 
+  let sloutionNum
+  if($(window).width()>1000){
+    sloutionNum = 500
+  }else{
+    sloutionNum = 200
+  }
   $(window).scroll(() => {
     let toTop = $(this).scrollTop()
     // console.log(toTop)
     let solutionTop = $('.solution').offset().top - toTop
     if (solutionTop - 100 < window.innerHeight && toTop < $('.solution').offset().top + 500) {
       $('.solution-bg').css({'display' : 'block'})
-      $('.solution-bg').css({'display' : 'block','transform' : 'translateY('+ (solutionTop - 500) / 1.5 +'px)'})
+      $('.solution-bg').css({'display' : 'block','transform' : 'translateY('+ (solutionTop - sloutionNum) / 1.5 +'px)'})
     } else {
       $('.solution-bg').css({'display' : 'none'})
     }
@@ -101,6 +122,33 @@
       $('.bannerBack').css({'transform' : 'translateY(-'+ toTop / 10 +'px)'})
     }
     
-
   })
+
+  // 切换项目
+  $('#project__select').change(function(){
+    if($(this).val() == '上海'){
+      changeSH()
+    }
+    if($(this).val() == '北京'){
+      changeBJ()
+    }
+  })
+  
+  function changeSH(){
+    $('#project .project-control h4').html('上海')
+    $('#project .project-control .project-control__item span').html('高和云峰')
+    $('#project .project-map .project-map-wall .project-map-item').css({'background-image' : "url('../img/mapBg2.png')"})
+    $('#project .project-map .project-map-wall li .project-map-item__text h5').html('高和云峰')
+    $('#project .project-map .project-map-wall li .project-map-item__text p').html('上海市杨浦区通北路749号高和云峰')
+    $('#project .project-map .project-map-wall li .project-map-item__img img').attr('src','img/map/map2.png')
+  }
+  function changeBJ(){
+    $('#project .project-control h4').html('北京')
+    $('#project .project-control .project-control__item span').html('新街高和')
+    $('#project .project-map .project-map-wall .project-map-item').css({'background-image' : "url('../img/mapBg.png')"})
+    $('#project .project-map .project-map-wall li .project-map-item__text h5').html('新街高和')
+    $('#project .project-map .project-map-wall li .project-map-item__text p').html('北京市西城区新街口北大街3号新街高和')
+    $('#project .project-map .project-map-wall li .project-map-item__img img').attr('src','img/map/map1.png')
+  }
+  
 })()

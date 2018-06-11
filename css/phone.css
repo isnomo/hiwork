@@ -1,0 +1,87 @@
+.bannerBack{
+  background-color: #93D2E9;
+  background-image: url('../img/bannerBg.png');
+  background-size: 1350px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  padding-top: 100px;
+  transition: transform .1s ease;
+}
+.phone-main{
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  background-image: url('../img/phoneBg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  .phone-content{
+    background-color: #fff;
+    height: 100%;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    .phone-content__logo{
+      width: auto;
+      height: 20vh;
+      img{
+        width: 100%;
+      }
+    }
+    .phone-content__qcode{
+      width: auto;
+      height: 30vh;
+      padding-top: 5%;
+      h5{
+        font-size: 13px;
+        color: #000000;
+        letter-spacing: 1.1px;
+        line-height: 20px;
+        margin-bottom: 5%;
+      }
+      img{
+        width: 40%;
+      }
+    }
+    .phone-content__contact{
+      width: auto;
+      height: 40vh;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+/*电脑*/
+@media screen  and (min-width:1400px){
+}
+/*笔记本*/
+@media screen and (max-width: 1399px) and (min-width: 1200px){
+   
+}
+@media screen and (max-width: 1199px) and (min-width: 1023px){
+}  
+/*横向平板*/
+@media screen and (max-width: 1099px) and (min-width: 1023px){
+}   
+ 
+/*平板*/
+@media screen and (max-width: 1023px) and (min-width: 768px){
+}
+/*笔记本高度*/
+@media screen and (max-height: 767px) and (min-height: 600px){
+
+}
+/*手机*/
+@media screen and (max-width: 767px){
+}
+
+@media screen and (max-width: 320px){
+}
