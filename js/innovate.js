@@ -73,7 +73,9 @@
   }
 
   $(window).load(() => {
-    $('.banner .banner-main h3').css({ 'color': 'rgba(255,255,255,1)', 'transform': 'scale(1)', 'letter-spacing': '7px' })
+    setTimeout(()=>{
+      $('.banner .banner-main h3').css({ 'color': 'rgba(255,255,255,1)', 'transform': 'scale(1)', 'letter-spacing': '7px' })
+    },100)
 
     $('.floor-main .floor-main-wall .floor-bg-div .floor-bg-div__item').hover(function () {
       let hoverIndex = $(this).index()

@@ -147,6 +147,55 @@
 }
 /*手机*/
 @media screen and (max-width: 767px){
+  .future-phone{
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .future-main{
+    padding: 15px 15px 30px;
+    .future-main-item{
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      .future-main-item__text{
+        background: #FFFFFF;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        h3{
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        p{
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .item__arrows{
+          bottom: 20px;
+        }
+      }
+      .future-main-item__img{
+        width: 100%;
+        margin-top: 20px;
+      }
+      .future-main-item__bigImg{
+        width: 100%;
+        margin-top: 20px;
+      }
+      .future-main-item__imgText{
+        width: 100%;
+        margin-top: 20px;
+
+        .text{
+          background: #fff;
+          padding: 20px 35px;
+          .item__arrows{
+            float: inherit;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 320px){

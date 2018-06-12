@@ -27,10 +27,11 @@
 <body>
   <div class="loading"></div>
   <header class="smallNav black-logo"></header>
-  
+  <phone-header class="smallPhone black-phone"></phone-header>
   <div class="banner">
     <!-- 头部导航栏 -->
     <header class="header-wall"></header>
+    <phone-header class="phone-wall"></phone-header>
     <div class="banner-main hiwork-layout">
       <h3>未来办公空间解决方案提供商</h3>
     </div>
@@ -87,7 +88,9 @@
   <!-- <script src="js/bannerList.js"></script> -->
   <script>
     $(window).load(function() {
-      $('.banner .banner-main h3').css({ 'color': 'rgba(255,255,255,1)', 'transform': 'scale(1)','letter-spacing':'7px'})
+      setTimeout(()=>{
+        $('.banner .banner-main h3').css({ 'color': 'rgba(255,255,255,1)', 'transform': 'scale(1)', 'letter-spacing': '7px' })
+      },100)
     })
   </script>
 </body>

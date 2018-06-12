@@ -27,10 +27,11 @@
 <body>
   <div class="loading"></div>
   <header class="smallNav black-logo"></header>
-
+  <header class="smallNav black-logo"></header>
   <div class="banner news-0">
     <!-- 头部导航栏 -->
     <header class="header-wall"></header>
+    <phone-header class="phone-wall"></phone-header>
     <div class="banner-main hiwork-layout">
       <h3>未来办公创新平台——引导城市快速变革中的产业升级</h3>
       <!-- <h3>——引导城市快速变革中的产业升级</h3> -->
@@ -174,8 +175,10 @@
   <!-- <script src="js/contact.js"></script> -->
   <!-- <script src="js/bannerList.js"></script> -->
   <script>
+     setTimeout(()=>{
+        $('.banner .banner-main h3').css({ 'color': 'rgba(255,255,255,1)', 'transform': 'scale(1)', 'letter-spacing': '7px' })
+      },100)
     $(window).load(() => {
-      $('.banner .banner-main h3').css({ 'color': 'rgba(255,255,255,1)', 'transform': 'scale(1)', 'letter-spacing': '7px' })
       window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "2", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
     })
   </script>

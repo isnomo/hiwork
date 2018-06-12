@@ -286,7 +286,9 @@
   <script src="js/efficiency.js"></script>
   <script>
     $(window).load(() => {
-      $('.banner .banner-main h3').css({ 'color': 'rgba(255,255,255,1)', 'transform': 'scale(1)','letter-spacing':'7px'})
+      setTimeout(()=>{
+        $('.banner .banner-main h3').css({ 'color': 'rgba(255,255,255,1)', 'transform': 'scale(1)', 'letter-spacing': '7px' })
+      },100)
     })
     carouselSmall({
       wall: $("#carousel-layout"),
