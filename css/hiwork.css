@@ -389,6 +389,7 @@ phone-header{
       margin-left: -15px;
       z-index: 20;
       display: none;
+      box-shadow: 0px 5px 20px rgba(100, 100, 100, 0.3);
       ul{
         li{
           

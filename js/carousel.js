@@ -18,6 +18,8 @@ function carousel(option) {
   let hoverStop = option.hoverStop || false
   // 是否自动播放
   let autoPlay = option.autoPlay || false
+  // 是否触摸事件
+  let isTouch = option.isTouch || false
 
   // 初始化
   let nowTime = new Date().getTime()
@@ -115,31 +117,34 @@ function carousel(option) {
   // 触摸事件
   let touch_px;
   let rate;
-  $boxImg.on('touchstart', function (e) {
-    if(new Date().getTime() - nowTime < 200){
-      return false
-    } else {
-      nowTime = new Date().getTime()
-    }
-    var touch = e.originalEvent.targetTouches[0];
-    touch_px = touch.pageX;
-    clearInterval(timer);
-  });
-  $boxImg.on('touchmove', function (e) {
-    var touch = e.originalEvent.targetTouches[0];
-    rate = touch_px - touch.pageX;
-  });
-  $boxImg.on('touchend', function (e) {
-    if (rate > 50) {
-      $(this).stop(true);
-      moveDown();
-      rate = 0;
-    } else if (rate < -50) {
-      $(this).stop(true);
-      moveUp();
-      rate = 0;
-    }
-  });
+  if(isTouch){
+    $boxImg.on('touchstart', function (e) {
+      if(new Date().getTime() - nowTime < 200){
+        return false
+      } else {
+        nowTime = new Date().getTime()
+      }
+      var touch = e.originalEvent.targetTouches[0];
+      touch_px = touch.pageX;
+      clearInterval(timer);
+    });
+    $boxImg.on('touchmove', function (e) {
+      var touch = e.originalEvent.targetTouches[0];
+      rate = touch_px - touch.pageX;
+    });
+    $boxImg.on('touchend', function (e) {
+      if (rate > 50) {
+        $(this).stop(true);
+        moveDown();
+        rate = 0;
+      } else if (rate < -50) {
+        $(this).stop(true);
+        moveUp();
+        rate = 0;
+      }
+    });
+  }
+  
 
 
   if (hoverStop) {
