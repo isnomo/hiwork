@@ -86,85 +86,34 @@
     .efficiency-carousel-main{
       padding-top: 80px;
       overflow: hidden;
-      height: 680px;
+      // height: 680px;
       width: 100%;
-      ul{
-        // width: 2000px;
-        
-        li{
-          width: 390px;
-          &.active .item-wall{
-            transform: scale(1.1);
-          }
-          &:last-child{
-            // margin-right: 0;
-          }
-          &:nth-child(1) .item-wall{
-            background-image: url('../img/eff1.png');
-            background-position: right bottom;
-            background-size: 180px;
-            background-repeat: no-repeat;
-          }
-          &:nth-child(2) .item-wall{
-            background-image: url('../img/eff2.png');
-            background-position: right 200px;
-            background-size: 120px;
-            background-repeat: no-repeat;
-            p{
-              font-size: 1.2rem;
-            }
-          }
-          &:nth-child(3) .item-wall{
-            background-image: url('../img/eff3.png');
-            background-position: right 300px;
-            background-size: 160px;
-            background-repeat: no-repeat;
-          }
-          .item-wall{
-            background: #FFFFFF;
-            border: 1px solid rgba(195, 195, 195, 0.48);
-            transition: all .3s ease-out;
-            transform: scale(1);
-            margin-right: 60px;
-            border-radius: 6px;
-            padding: 15px 80px 15px 30px;
-            height: 520px;
-            .item-title{
-              display: inline-block;
-              border-bottom: 3px solid #009944;
-              padding-bottom: 3px;
-              margin-bottom: 15px;
-              h5{
-                font-weight: 600;
-                font-size: 1.6rem;
-                letter-spacing: 1.7px;
-                line-height: 24px;
-              }
-            }
-            p{
-              font-size: 1.4rem;
-              letter-spacing: 1.5px;
-              text-align: justify;
-              line-height: 24px;
-            }
-            .list{
-              margin-top: 20px;
-              p{
-                font-size: 1.7rem;
-                letter-spacing: 2.07px;
-                text-align: justify;
-                line-height: 32px;
-              }
-            }
-          }
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between; 
+      .item-wall{
+        background: #FFFFFF;
+        border: 1px solid rgba(195, 195, 195, 0.48);
+        transition: all .3s ease-out;
+        transform: scale(1);
+        border-radius: 6px;
+        padding: 35px 40px 30px;
+        height: 300px;
+        width: 32%;
+        svg{
+          margin-bottom: 30px;
+        }
+        p{
+          font-size: 1.4rem;
+          letter-spacing: 1.5px;
+          text-align: justify;
+          line-height: 24px;
         }
       }
     }
   }
 }
-#phone-carousel{
-  display: none;
-}
+
 
 
 
@@ -209,12 +158,7 @@
       }
     }
   }
-  #carousel-layout{
-    display: none;
-  }
-  #phone-carousel{
-    display: block;
-  }
+
   .efficiency-main{
   
     .efficiency-main-intro{
@@ -260,55 +204,10 @@
       }
       
       .efficiency-carousel-main{
-        padding-top: 30px;
-        height: auto;
-        ul{
-          // width: 2000px;
-          
-          li{
-            width: 100%;
-            &.active .item-wall{
-              transform: scale(1);
-            }
-            .item-wall{
-              background: #FFFFFF;
-              border: 1px solid rgba(195, 195, 195, 0.48);
-              transition: all .3s ease-out;
-              transform: scale(1);
-              margin-right: 0;
-              border-radius: 6px;
-              padding: 15px 80px 15px 30px;
-              height: 520px;
-              margin-bottom: 30px;
-              .item-title{
-                display: inline-block;
-                border-bottom: 3px solid #009944;
-                padding-bottom: 3px;
-                margin-bottom: 15px;
-                h5{
-                  font-weight: 600;
-                  font-size: 1.6rem;
-                  letter-spacing: 1.7px;
-                  line-height: 24px;
-                }
-              }
-              p{
-                font-size: 1.4rem;
-                letter-spacing: 1.5px;
-                text-align: justify;
-                line-height: 24px;
-              }
-              .list{
-                margin-top: 20px;
-                p{
-                  font-size: 1.7rem;
-                  letter-spacing: 2.07px;
-                  text-align: justify;
-                  line-height: 32px;
-                }
-              }
-            }
-          }
+        flex-wrap: wrap; 
+        .item-wall{
+          width: 100%;
+          margin-bottom: 40px;
         }
       }
     }

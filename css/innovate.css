@@ -153,6 +153,16 @@
         &.active{
           opacity: 1;
         }
+        .floor-title{
+          transform: skew(60deg, -9deg) scale(1) translate(0, 0);
+          width: 190px;
+          position: absolute;
+          top: 80px;
+          left: 820px;
+          img{
+            width: 100%;
+          }
+        }
         &:nth-child(1){
           z-index: 7;
           width: 100%;
@@ -220,10 +230,6 @@
           left: 70px;
         }
         .btn:nth-child(2){
-          top: 120px;
-          left: 450px;
-        }
-        .btn:nth-child(3){
           top: 80px;
           left: 740px;
         }
@@ -231,13 +237,17 @@
       .floor-3{
         .btn:nth-child(1){
           top: 40px;
-          left: 120px;
+          left: 80px;
         }
         .btn:nth-child(2){
+          top: 120px;
+          left: 240px;
+        }
+        .btn:nth-child(3){
           top: 100px;
           left: 440px;
         }
-        .btn:nth-child(3){
+        .btn:nth-child(4){
           top: 130px;
           left: 840px;
         }
